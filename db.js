@@ -2,7 +2,7 @@ const sql=require("mysql2")
 const mysql=sql.createConnection({
     host:'localhost',
     user:'root',
-    password:'techv1@3',
+    password:'techv1@123',
     database:'ExpressJs'
 });
 function getmobiles(){
