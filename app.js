@@ -13,7 +13,7 @@ app.get("/mobiles",(req,res)=>{
     })
    
 })
-app.post("/mobiles",(req,res)=>{
+app.post("/mobiless",(req,res)=>{
     db.addMobiles(req.body.id,req.body.name,req.body.price,req.body.ram,req.body.storagee)
     .then(()=>{
         res.send(req.body)
@@ -23,7 +23,7 @@ app.post("/mobiles",(req,res)=>{
     })
     
 })
-app.put("/mobiles",(req,res)=>{
+app.put("/mobiless",(req,res)=>{
     db.updateMobiles(req.body.id,req.body.name,req.body.price,req.body.ram,req.body.storagee)
     .then(()=>{
         res.send(req.body)
@@ -32,7 +32,7 @@ app.put("/mobiles",(req,res)=>{
         res.send("error")
     })
 })
-app.delete("/mobiles",(req,res)=>{
+app.delete("/mobiless",(req,res)=>{
     db.deleteMobiles(req.body.id)
     .then(()=>{
         res.send(req.body.id)
