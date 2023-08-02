@@ -3,7 +3,7 @@ const app=express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 const db=require("./db")
-app.get("/mobiles",(req,res)=>{
+app.get("/mobiless",(req,res)=>{
     db.getmobiles()
     .then((mobiles)=>{
         res.send(mobiles)
@@ -13,7 +13,7 @@ app.get("/mobiles",(req,res)=>{
     })
    
 })
-app.post("/mobiles",(req,res)=>{
+app.post("/mobiless",(req,res)=>{
     db.addMobiles(req.body.id,req.body.name,req.body.price,req.body.ram,req.body.storagee)
     .then(()=>{
         res.send(req.body)
